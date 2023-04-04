@@ -7,7 +7,7 @@
 #\*******************************************************************************/
 
 # take user input for party size
-# take user input for monstar party size
+# take user input for monster party size
 
 # Prompt user: Roll for party? Y/N
   #If No, take user imput for party values

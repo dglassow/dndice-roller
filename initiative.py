@@ -21,13 +21,10 @@ pMembers = []
 while True:
  roll = input("roll for party? Y/N: ")
  if roll.upper() == "Y":
-     print()
      print("Rolling for party")
-     print()
      exit()
 
  elif roll.upper() == "N":
-     print("__________________________")
      roll = input("Please enter party order ")
      exit()
  else:

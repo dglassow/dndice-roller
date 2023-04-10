@@ -18,8 +18,14 @@ print('Monster size is: ' + mSize)
   #If No, take user imput for party values
 pMembers = []
 
+for pMembers in pSize:
+  x = input('Enter players: ')
+  pMembers.append(x)
+
+print(pMembers)
+
 while True:
- roll = input("roll for party? Y/N: ")
+ roll = input("Roll for party? Y/N: ")
  if roll.upper() == "Y":
      print("Rolling for party")
      exit()

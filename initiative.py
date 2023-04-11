@@ -8,11 +8,10 @@
 import random
 
 # take user input for party size
-pSize = input("Enter party size: ")
-pSize = int(pSize)
+pSize = int(input("Enter party size: "))
 
 # take user input for monster party size
-mSize = (input("Enter monster party size: "))
+mSize = int(input("Enter monster party size: "))
 
 #Prompt user: Enter players
 pMembers = []
@@ -22,7 +21,9 @@ players = {'Name': [pMembers], 'roll': [initiative]}
 for i in range(pSize):
   pName = input("Enter player name: ")
   pMembers.append(pName)
-
+  modifier = input("Enter initiative mod: ")
+  modifier = int(modifier)
+  initiative.append(modifier)
 
 # Prompt user: Roll for party? Y/N
   #If No, take user imput for party values
@@ -33,7 +34,9 @@ while True:
     print("Rolling for party")
     for i in range(pSize):
       rolls = random.randrange(1,20)
-      initiative.append(rolls)
+      modifier = initiative[i]
+      rolls = int(rolls + modifier)
+      initiative[i] = rolls
     break
 
   elif roll.upper() == "N":
@@ -45,10 +48,21 @@ while True:
     print('Invalid Entry')
     break
 
-for i in range(pSize):
-  print(pMembers[i], initiative[i])
 # Roll for monsters
+for i in range(mSize):
+  print("Rolling for Monsters")
+  mNum = str(i + 1)
+  monster = "monster" + mNum
+  rolls = random.randrange(1,20)
+  rolls = int(rolls)
+  pMembers.append(monster)
+  initiative.append(rolls)
+
 # Save all values to an array & sort by turn
+totalPlayers = pSize + mSize
+
+for i in range(totalPlayers):
+  print(pMembers[i], initiative[i])
 
 
 #/*******************************************************************************\

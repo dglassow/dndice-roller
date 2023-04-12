@@ -2,7 +2,7 @@
 #|                                                                               |
 #| - Created by D.Glassow & J. Weathers                                          |
 #|                                                                               |
-#| - any variable or function inside will be available from any of your scripts. |
+#| - A simple python script that rolls for initiative according to DnD 5e        |
 #|                                                                               |
 #\*******************************************************************************/
 import random

@@ -30,7 +30,7 @@ for i in range(pSize):
 
 while True:
   roll = input("Roll for party? Y/N: ")
-  if roll.upper() == "Y" or roll.upper() == "Yes":
+  if roll.upper() == "Y" or roll.upper() == "YES":
     print("Rolling for party")
     for i in range(pSize):
       rolls = random.randrange(1,20)
@@ -39,7 +39,7 @@ while True:
       initiative[i] = rolls
     break
 
-  elif roll.upper() == "N" or roll.upper() == "No":
+  elif roll.upper() == "N" or roll.upper() == "NO":
     for i in range(pSize):
       rolls = input("Please enter initiative for " + pMembers[i] + ':')
       initiative.append(rolls)

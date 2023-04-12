@@ -44,9 +44,9 @@ while True:
       rolls = input("Please enter initiative for " + pMembers[i] + ':')
       initiative.append(rolls)
     break
+
   else:
     print('Invalid Entry')
-    break
 
 # Roll for monsters
 for i in range(mSize):
